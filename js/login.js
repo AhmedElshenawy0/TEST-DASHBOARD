@@ -16,7 +16,7 @@ form.addEventListener("submit", function (e) {
   const password = document.getElementById("password").value;
 
   // Password validation
-  if (password.length < 6) {
+  if (password.length <= 6) {
     showToast("Password must be at least 6 characters");
     return;
   }
