@@ -274,95 +274,6 @@ table button.delete:hover {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Pagination  */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin: 20px 0;
-  flex-wrap: wrap;
-}
-
-.pagination .btn {
-  background-color: #1f2937;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: all 0.2s ease;
-}
-
-.pagination .btn:hover:not(:disabled) {
-  background-color: #4ade80;
-  color: #000;
-}
-
-.pagination .btn:disabled {
-  background-color: #9ca3af;
-  cursor: not-allowed;
-}
-
-#page-info {
-  font-weight: 600;
-  font-size: 16px;
-  color: #1f2937;
-  min-width: 80px;
-  text-align: center;
-}
-
-@media (max-width: 480px) {
-  .pagination .btn {
-    padding: 6px 12px;
-    font-size: 14px;
-  }
-
-  #page-info {
-    font-size: 14px;
-    min-width: 60px;
-  }
-}
-
-/* Burger wrapper and icon */
-.burger-wrapper {
-  position: relative;
-}
-
-#burger-toggle {
-  display: none;
-}
-
-.burger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  padding: 12px;
-  position: fixed;
-  top: 6px;
-  right: 80px;
-  z-index: 1001;
-  color: #1f2937;
-}
-
-.burger::before {
-  content: "\2630";
-}
-
-.sidebar {
-  background: #263238;
-  color: #fff;
-  min-width: 220px;
-  padding: 20px;
-  height: 100vh;
-  transition: transform 0.3s ease;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
 @media (max-width: 768px) {
   table,
   thead,
@@ -418,6 +329,29 @@ table button.delete:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    min-width: 100%;
+  }
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  table th,
+  table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .header {
+    padding: 15px 5px;
+    width: 100%;
+  }
+}
+
 /* Toast */
 #toast-container {
   position: fixed;
@@ -453,26 +387,98 @@ table button.delete:hover {
     position: fixed;
     bottom: 0;
   }
-  .dashboard-container {
-    flex-direction: column;
-  }
-  .sidebar {
-    min-width: 100%;
-  }
-  .toolbar {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  table th,
-  table td {
-    font-size: 13px;
-    padding: 10px;
+}
+
+/* Pagination  */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.pagination .btn {
+  background-color: #1f2937;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.pagination .btn:hover:not(:disabled) {
+  background-color: #4ade80;
+  color: #000;
+}
+
+.pagination .btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+#page-info {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1f2937;
+  min-width: 80px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .pagination .btn {
+    padding: 6px 12px;
+    font-size: 14px;
   }
 
-  .header {
-    padding: 15px 5px;
-    width: 100%;
+  #page-info {
+    font-size: 14px;
+    min-width: 60px;
   }
+}
+
+/* Burger icon */
+.burger-wrapper {
+  position: relative;
+}
+
+#burger-toggle {
+  display: none;
+}
+
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 12px;
+  position: fixed;
+  top: 6px;
+  right: 80px;
+  z-index: 1001;
+  color: #1f2937;
+}
+
+.burger::before {
+  content: "\2630";
+}
+
+.sidebar {
+  background: #263238;
+  color: #fff;
+  min-width: 220px;
+  padding: 20px;
+  height: 100vh;
+  transition: transform 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
   .burger {
     display: block;
   }
