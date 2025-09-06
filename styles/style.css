@@ -211,10 +211,11 @@ main {
   margin-top: 20px;
   overflow-x: auto;
   border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-  background: #fff;
+  /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); */
 }
-
+#posts-tbody {
+  background-color: #f9fafc;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -451,7 +452,7 @@ table button.delete:hover {
   cursor: pointer;
   padding: 12px;
   position: fixed;
-  top: 6px;
+  top: 4px;
   right: 80px;
   z-index: 1001;
   color: #1f2937;
