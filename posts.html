@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="dashboard" class="page">
+      <header class="header">
+        <h1>Posts</h1>
+        <button id="logout" class="btn danger">Logout</button>
+      </header>
+
+      <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div id="nav-placeholder"></div>
+
+        <!-- Main Content -->
+        <main id="main-content">
+          <h2>All Posts</h2>
+
+          <div class="toolbar">
+            <input
+              id="search"
+              type="text"
+              placeholder="Search by title/body..."
+            />
+            <select id="page-size">
+              <option value="5">5 / page</option>
+              <option value="10" selected>10 / page</option>
+              <option value="20">20 / page</option>
+            </select>
+            <div class="sort">
+              <button id="sort-id" class="btn">Sort by ID</button>
+              <button id="sort-title" class="btn">Sort by Title</button>
+            </div>
+          </div>
+
+          <!-- Status -->
+          <div id="status" class="status"></div>
+
+          <!-- Table -->
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>Body</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="posts-tbody"></tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <button id="prev" class="btn">Prev</button>
+            <span id="page-info"></span>
+            <button id="next" class="btn">Next</button>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="js/sidebar.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/posts.js"></script>
+  </body>
+</html>
